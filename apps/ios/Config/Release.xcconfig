@@ -1,0 +1,4 @@
+#include? "../Pods/Target Support Files/Pods-Relay/Pods-Relay.release.xcconfig"
+
+SWIFT_COMPILATION_MODE = wholemodule
+SWIFT_OPTIMIZATION_LEVEL = -O

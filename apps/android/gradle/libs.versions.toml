@@ -1,0 +1,34 @@
+[versions]
+agp = "9.2.1"
+kotlin = "2.3.10"
+activityCompose = "1.13.0"
+cameraX = "1.6.1"
+composeBom = "2026.06.01"
+coreKtx = "1.19.0"
+lifecycle = "2.11.0"
+lynx = "3.8.0"
+mlkitText = "16.0.1"
+
+[libraries]
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+androidx-camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "cameraX" }
+androidx-camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "cameraX" }
+androidx-camera-view = { module = "androidx.camera:camera-view", version.ref = "cameraX" }
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+androidx-compose-material-icons = { module = "androidx.compose.material:material-icons-core" }
+androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui" }
+androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+lynx-engine = { module = "org.lynxsdk.lynx:lynx", version.ref = "lynx" }
+lynx-jssdk = { module = "org.lynxsdk.lynx:lynx-jssdk", version.ref = "lynx" }
+lynx-primjs = { module = "org.lynxsdk.lynx:primjs", version.ref = "lynx" }
+lynx-trace = { module = "org.lynxsdk.lynx:lynx-trace", version.ref = "lynx" }
+mlkit-text-chinese = { module = "com.google.mlkit:text-recognition-chinese", version.ref = "mlkitText" }
+mlkit-text-latin = { module = "com.google.mlkit:text-recognition", version.ref = "mlkitText" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

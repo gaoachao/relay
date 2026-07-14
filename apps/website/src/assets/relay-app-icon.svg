@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Relay app icon</title>
+  <desc id="desc">Three physical controls relay into one clear, accessible action.</desc>
+  <rect width="1024" height="1024" fill="#007AFF"/>
+  <circle cx="226" cy="318" r="54" fill="#FFFFFF"/>
+  <circle cx="226" cy="512" r="54" fill="#FFFFFF"/>
+  <circle cx="226" cy="706" r="54" fill="#FFFFFF"/>
+  <path d="M286 318H330C430 318 452 412 538 472L608 512" fill="none" stroke="#FFFFFF" stroke-width="58" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M286 512H608" fill="none" stroke="#FFFFFF" stroke-width="58" stroke-linecap="round"/>
+  <path d="M286 706H330C430 706 452 612 538 552L608 512" fill="none" stroke="#FFFFFF" stroke-width="58" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="600" y="354" width="248" height="316" rx="124" fill="#FFFFFF"/>
+  <rect x="666" y="474" width="116" height="76" rx="38" fill="#007AFF"/>
+</svg>

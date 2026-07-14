@@ -1,0 +1,21 @@
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '17.0'
+
+install! 'cocoapods', :deterministic_uuids => false
+
+target 'Relay' do
+  use_frameworks! :linkage => :static
+
+  pod 'Lynx', '3.8.0', :subspecs => ['Framework']
+  pod 'PrimJS', '3.8.0', :subspecs => ['quickjs', 'napi']
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '17.0'
+      config.build_settings['ENABLE_USER_SCRIPT_SANDBOXING'] = 'NO'
+    end
+  end
+end

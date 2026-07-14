@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Relay</string>
+    <string name="home_camera_note">Scanning stays in the native camera flow.</string>
+    <string name="home_control_note">Relay guides you; it does not control equipment.</string>
+    <string name="home_primary_action">Scan a control panel</string>
+    <string name="home_tagline">Make unfamiliar controls clear.</string>
+    <string name="guidance_title">Guidance</string>
+    <string name="navigate_back">Back</string>
+    <string name="scanner_camera_error">The live scanner could not start on this device.</string>
+    <string name="scanner_finding">Point at the control labels</string>
+    <string name="scanner_permission_message">Camera access is needed to read the panel. You can also continue with the local demo.</string>
+    <string name="scanner_permission_title">Camera access is off</string>
+    <string name="scanner_review_note">Review the real panel before following generated guidance.</string>
+    <string name="scanner_use_demo">Use demo panel</string>
+    <string name="scanner_use_panel">Use this panel</string>
+    <plurals name="scanner_found_count">
+        <item quantity="one">%1$d label found</item>
+        <item quantity="other">%1$d labels found</item>
+    </plurals>
+</resources>

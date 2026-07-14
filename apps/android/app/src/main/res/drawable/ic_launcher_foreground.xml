@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Geometry mirrors assets/brand/relay-app-icon.svg, the single brand master. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="1024"
+    android:viewportHeight="1024">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M172,318a54,54 0,1 0,108 0a54,54 0,1 0,-108 0M172,512a54,54 0,1 0,108 0a54,54 0,1 0,-108 0M172,706a54,54 0,1 0,108 0a54,54 0,1 0,-108 0" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M286,318H330C430,318 452,412 538,472L608,512"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="58" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M286,512H608"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:strokeWidth="58" />
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M286,706H330C430,706 452,612 538,552L608,512"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="58" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M724,354C792.5,354 848,409.5 848,478V546C848,614.5 792.5,670 724,670C655.5,670 600,614.5 600,546V478C600,409.5 655.5,354 724,354Z" />
+    <path
+        android:fillColor="#007AFF"
+        android:pathData="M704,474H744A38,38 0,0 1,782 512A38,38 0,0 1,744 550H704A38,38 0,0 1,666 512A38,38 0,0 1,704 474Z" />
+</vector>

@@ -1,0 +1,31 @@
+{
+  "name": "@relay/agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.14.0"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch --import tsx src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node --env-file-if-exists=.env dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@hono/node-server": "2.0.8",
+    "@relay/contracts": "workspace:*",
+    "@relay/openui-catalog": "workspace:*",
+    "hono": "4.12.28",
+    "openai": "6.45.0",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "tsx": "4.23.0",
+    "typescript": "catalog:",
+    "vitest": "4.1.10"
+  }
+}

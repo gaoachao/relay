@@ -1,0 +1,24 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.turbo
+coverage
+dist
+node_modules
+
+# Lynx / web
+.rsbuild
+*.lynx.bundle
+
+# Android
+.gradle
+apps/android/.idea
+apps/android/**/build
+local.properties
+
+# iOS
+apps/ios/Pods
+apps/ios/DerivedData
+apps/ios/**/*.xcuserstate
+apps/ios/**/xcuserdata

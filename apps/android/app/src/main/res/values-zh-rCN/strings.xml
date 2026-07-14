@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Relay</string>
+    <string name="home_camera_note">扫描始终由原生相机流程完成。</string>
+    <string name="home_control_note">Relay 只提供引导，不会控制设备。</string>
+    <string name="home_primary_action">扫描控制面板</string>
+    <string name="home_tagline">让陌生的控制面板变清楚。</string>
+    <string name="guidance_title">操作引导</string>
+    <string name="navigate_back">返回</string>
+    <string name="scanner_camera_error">此设备无法启动实时扫描。</string>
+    <string name="scanner_finding">将镜头对准控制标签</string>
+    <string name="scanner_permission_message">需要相机权限来读取控制面板，也可以使用本地演示继续。</string>
+    <string name="scanner_permission_title">相机权限已关闭</string>
+    <string name="scanner_review_note">执行生成的引导前，请先核对真实面板。</string>
+    <string name="scanner_use_demo">使用演示面板</string>
+    <string name="scanner_use_panel">使用这个面板</string>
+    <plurals name="scanner_found_count">
+        <item quantity="other">已识别 %1$d 个标签</item>
+    </plurals>
+</resources>

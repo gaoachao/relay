@@ -1,0 +1,11 @@
+page {
+  --relay-accent: #0a84ff;
+  --relay-background: #f2f2f7;
+  --relay-card: #ffffff;
+  --relay-label: #111111;
+  --relay-secondary: #5f5f66;
+  --relay-separator: #d1d1d6;
+  --relay-success: #248a3d;
+  --relay-warning: #c93400;
+  font-size: calc(100vw / 23.4375);
+}

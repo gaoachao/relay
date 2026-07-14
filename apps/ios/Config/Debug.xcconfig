@@ -1,0 +1,4 @@
+#include? "../Pods/Target Support Files/Pods-Relay/Pods-Relay.debug.xcconfig"
+
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG
+OTHER_SWIFT_FLAGS = $(inherited) -D RELAY_DEBUG

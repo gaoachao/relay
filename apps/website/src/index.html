@@ -1,0 +1,21 @@
+<!doctype html>
+<!-- biome-ignore lint/a11y/useValidLang: Rsbuild replaces this template value with zh-CN or en. -->
+<html lang="<%= locale %>">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="<%= description %>" />
+    <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<%= title %>" />
+    <meta property="og:description" content="<%= description %>" />
+    <link rel="alternate" hreflang="zh-CN" href="../zh/" />
+    <link rel="alternate" hreflang="en" href="../en/" />
+    <link rel="alternate" hreflang="x-default" href="../en/" />
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

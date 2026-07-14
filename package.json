@@ -1,0 +1,26 @@
+{
+  "name": "relay",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@11.7.0",
+  "engines": {
+    "node": ">=24.14.0"
+  },
+  "scripts": {
+    "build": "turbo build",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
+    "dev": "turbo dev --parallel",
+    "format": "biome format --write .",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "test": "turbo test",
+    "typecheck": "turbo typecheck"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.2",
+    "turbo": "2.10.4",
+    "typescript": "6.0.3"
+  }
+}
