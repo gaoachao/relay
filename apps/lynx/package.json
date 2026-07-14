@@ -20,7 +20,7 @@
     "@lynx-js/rspeedy": "0.15.2",
     "@lynx-js/types": "3.9.0",
     "@relay/openui-catalog": "workspace:*",
-    "@types/react": "18.3.28",
+    "@types/react": "19.2.17",
     "typescript": "5.9.3",
     "vitest": "4.1.10"
   }
