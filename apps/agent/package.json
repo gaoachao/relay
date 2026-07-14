@@ -19,7 +19,7 @@
     "@relay/contracts": "workspace:*",
     "@relay/openui-catalog": "workspace:*",
     "hono": "4.12.28",
-    "openai": "6.45.0",
+    "openai": "6.46.0",
     "zod": "catalog:"
   },
   "devDependencies": {
