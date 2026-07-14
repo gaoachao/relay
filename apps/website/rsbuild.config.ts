@@ -4,6 +4,8 @@ import { pluginTypeCheck } from '@rsbuild/plugin-type-check'
 
 type PageName = 'index' | 'zh' | 'en'
 
+const basePath = process.env.RELAY_BASE_PATH ?? '/'
+
 const pageMetadata: Record<
   PageName,
   {
@@ -47,10 +49,17 @@ export default defineConfig({
       return pageMetadata[entryName as PageName].title
     },
     templateParameters({ entryName }) {
-      return pageMetadata[entryName as PageName]
+      return {
+        ...pageMetadata[entryName as PageName],
+        alternatePrefix: entryName === 'index' ? './' : '../',
+      }
     },
   },
+  server: {
+    base: basePath,
+  },
   output: {
+    assetPrefix: basePath,
     cleanDistPath: true,
     legalComments: 'none',
     sourceMap: false,

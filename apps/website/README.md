@@ -2,6 +2,8 @@
 
 The bilingual product site for Relay, built with React 19, TypeScript, and Rsbuild v2.
 
+[Live site](https://gaoachao.github.io/relay/)
+
 ## Routes
 
 - `/zh/` — Simplified Chinese
@@ -23,3 +25,6 @@ pnpm --filter @relay/website build
 ```
 
 The production build requires Node.js 24.14 or newer, matching the repository engine.
+
+GitHub Pages builds with `RELAY_BASE_PATH=/relay/` so generated assets remain valid under
+the repository path. Local development continues to use `/`.

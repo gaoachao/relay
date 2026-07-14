@@ -4,7 +4,7 @@
 
 对准面板，说出目标。Relay 会把陌生的物理控件，变成清晰、无障碍的操作界面。
 
-[English](./README.md)
+[网站](https://gaoachao.github.io/relay/) · [English](./README.md)
 
 ## 开始
 

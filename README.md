@@ -4,7 +4,7 @@
 
 Point the camera. Say what you need. Relay turns an unfamiliar control panel into a clear, accessible interface.
 
-[中文](./README.zh-CN.md)
+[Website](https://gaoachao.github.io/relay/) · [中文](./README.zh-CN.md)
 
 ## Start
 
