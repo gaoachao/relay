@@ -25,7 +25,6 @@ export function TranslationDemo({ copy }: TranslationDemoProps) {
       <div className="page-shell">
         <div className="section-intro">
           <h2 id="demo-title">{copy.demo.title}</h2>
-          <p>{copy.demo.lead}</p>
         </div>
 
         <fieldset className="mode-picker">

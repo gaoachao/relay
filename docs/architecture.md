@@ -1,6 +1,6 @@
 # Architecture
 
-Relay keeps native capabilities native and generated UI constrained.
+Native shells own device capabilities. Lynx renders only catalog-constrained UI.
 
 ```text
 Camera + intent
@@ -12,50 +12,26 @@ RelayBridge  ← ReactLynx actions ← Lynx renderer
 
 ## Boundaries
 
-| Layer | Owns | Does not own |
-| --- | --- | --- |
-| iOS / Android | Camera, permission, haptics, speech, Lynx lifecycle | Model keys, generated layouts |
-| ReactLynx | OpenUI renderer, accessible components, view state | Camera APIs, arbitrary native calls |
-| Agent | Validation, model call, cumulative SSE, mock stream | Device permissions, direct equipment control |
-| Website | Bilingual story and demo entry points | Runtime secrets |
+| Layer | Owns |
+| --- | --- |
+| iOS / Android | Camera, permissions, haptics, speech, Lynx lifecycle |
+| ReactLynx | OpenUI rendering, accessible components, view state |
+| Agent | Validation, model calls, cumulative SSE, mock stream |
+| Website | Bilingual product story |
 
-`RelayBridge` is the narrow native boundary. Its callable surface is declared in
-`apps/lynx/src/bridge/native-modules.d.ts` and mirrored by both native hosts.
+`RelayBridge` is the only generated-to-native boundary. Its type declaration in `apps/lynx/src/bridge/native-modules.d.ts` is mirrored by both hosts.
 
-## Request flow
+## Flow
 
-1. The native shell captures a panel observation and a spoken or typed goal.
-2. The client maps that state to `OpenUiGenerationRequest` and sends it to `POST /v1/openui/stream`.
-3. The Agent validates the payload and selects the Relay component catalog.
-4. The response arrives as cumulative OpenUI over server-sent events.
-5. `OpenUiRenderer` updates the ReactLynx surface while streaming.
-6. A user action crosses `RelayBridge` only when native capability is required.
-7. Medium- and high-risk actions stop at `VerifyGate` for explicit confirmation.
+1. A host captures a panel and goal, then sends `OpenUiGenerationRequest` to `POST /v1/openui/stream`.
+2. The Agent validates it and streams cumulative OpenUI from the Relay catalog.
+3. `OpenUiRenderer` updates the Lynx surface.
+4. Native-only actions cross `RelayBridge`; risky actions stop at `VerifyGate`.
 
-## Why these choices
+## Constraints
 
-- Native shells preserve platform camera, permission, and accessibility behavior.
-- Lynx shares one high-performance UI implementation across iOS and Android.
-- OpenUI limits generation to known components instead of arbitrary code.
-- A server gateway keeps model credentials and prompt policy off-device.
-- Shared Zod contracts reject malformed data at trust boundaries.
-- A deterministic mock keeps the demo usable without network or model access.
-
-## Repository
-
-```text
-apps/
-  android/   Kotlin host
-  ios/       Swift host
-  lynx/      ReactLynx UI
-  agent/     OpenUI stream gateway
-  website/   bilingual Rsbuild site
-packages/
-  contracts/       runtime schemas and shared types
-  openui-catalog/  component names and generation policy
-assets/
-  brand/     SVG master
-docs/        architecture, development, security
-```
-
-This split makes each runtime independently deployable while keeping the protocol shared.
+- `packages/contracts` validates every trust boundary.
+- `packages/openui-catalog` is the generated component allowlist.
+- Model credentials and prompt policy remain server-side.
+- The deterministic mock works without network access.
+- Each runtime deploys independently while sharing the protocol.

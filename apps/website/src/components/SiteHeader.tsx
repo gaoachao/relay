@@ -21,9 +21,11 @@ export function SiteHeader({ copy, locale }: SiteHeaderProps) {
           className="primary-navigation"
           aria-label={locale === 'zh' ? '主要导航' : 'Primary navigation'}
         >
-          <a href="#experience">{copy.navigation.experience}</a>
-          <a href="#approach">{copy.navigation.approach}</a>
-          <a href="#technology">{copy.navigation.technology}</a>
+          <a href="#experience">{copy.navigation.demo}</a>
+          <a href="#technology">{copy.navigation.stack}</a>
+          <a href="https://github.com/gaoachao/relay" target="_blank" rel="noreferrer">
+            {copy.navigation.github}
+          </a>
         </nav>
 
         <a

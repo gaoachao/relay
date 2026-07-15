@@ -8,8 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 private val RelayLightColors = lightColorScheme(
-    primary = Color(0xFF007AFF),
-    onPrimary = Color.White,
+    primary = Color(0xFF68405F),
+    onPrimary = Color(0xFFFFFFFF),
     background = Color(0xFFF2F2F7),
     onBackground = Color(0xFF111111),
     surface = Color.White,
@@ -19,8 +19,8 @@ private val RelayLightColors = lightColorScheme(
 )
 
 private val RelayDarkColors = darkColorScheme(
-    primary = Color(0xFF0A84FF),
-    onPrimary = Color.White,
+    primary = Color(0xFFD6A7C4),
+    onPrimary = Color(0xFF111111),
     background = Color(0xFF000000),
     onBackground = Color(0xFFF5F5F7),
     surface = Color(0xFF1C1C1E),

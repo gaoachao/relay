@@ -1,5 +1,6 @@
 page {
-  --relay-accent: #0a84ff;
+  --relay-accent: #68405f;
+  --relay-on-accent: #ffffff;
   --relay-background: #f2f2f7;
   --relay-card: #ffffff;
   --relay-label: #111111;
@@ -8,4 +9,10 @@ page {
   --relay-success: #248a3d;
   --relay-warning: #c93400;
   font-size: calc(100vw / 23.4375);
+}
+
+page[data-theme="dark"],
+.relay-page--dark {
+  --relay-accent: #d6a7c4;
+  --relay-on-accent: #111111;
 }

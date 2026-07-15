@@ -14,19 +14,22 @@ export function SiteFooter({ copy, locale }: SiteFooterProps) {
           <p>{copy.footer.disclaimer}</p>
         </div>
         <nav aria-label={locale === 'zh' ? '相关文档' : 'Related documentation'}>
+          <a href="https://github.com/gaoachao/relay" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
           <a
             href="https://lynxjs.org/next/guide/start/integrate-with-existing-apps.html?platform=ios"
             target="_blank"
             rel="noreferrer"
           >
-            {copy.footer.lynxDocs}
+            Lynx
           </a>
           <a
             href="https://lynxjs.org/next/react/genui/openui.html"
             target="_blank"
             rel="noreferrer"
           >
-            {copy.footer.openUiDocs}
+            OpenUI
           </a>
         </nav>
       </div>

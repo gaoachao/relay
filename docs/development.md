@@ -2,48 +2,27 @@
 
 ## Requirements
 
-- Node.js 24.14 or newer
-- pnpm 11.7
-- Xcode and CocoaPods for iOS
-- Android Studio and an Android SDK for Android
+Node.js 24.14+ · pnpm 11.7 · Xcode/CocoaPods · Android Studio/SDK
 
-## JavaScript workspace
+## Workspace
 
 ```bash
 corepack enable
 pnpm install
 pnpm dev
+pnpm check
 ```
 
-Run one surface when you want a quieter loop:
+Run one package with `pnpm --filter @relay/<name> dev`. `pnpm check` lints, type-checks, tests, and builds every JavaScript package.
 
-```bash
-pnpm --filter @relay/website dev
-pnpm --filter @relay/lynx dev
-pnpm --filter @relay/agent dev
-```
-
-The Agent uses its deterministic mock when `OPENAI_API_KEY` is empty. To use a model:
+## Agent
 
 ```bash
 cp .env.example apps/agent/.env
 ```
 
-Keep the key in the Agent environment. Never add it to an app bundle.
+Without `OPENAI_API_KEY`, the Agent uses its mock. Keys must stay server-side.
 
 ## Native hosts
 
-Follow each host README for its one-time setup:
-
-- [iOS](../apps/ios/README.md)
-- [Android](../apps/android/README.md)
-
-Build the Lynx bundle before opening a host when you change `apps/lynx`.
-
-## Quality
-
-```bash
-pnpm check
-```
-
-That command lints, type-checks, tests, and builds every JavaScript workspace. Native hosts retain their platform checks.
+Build and sync Lynx before opening a host. Platform setup and checks live in the [iOS](../apps/ios/README.md) and [Android](../apps/android/README.md) READMEs.
