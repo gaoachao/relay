@@ -754,14 +754,6 @@ p {
   font-weight: 680;
 }
 
-.footer-inner p {
-  max-width: 540px;
-  margin-top: 6px;
-  color: var(--color-muted);
-  font-size: 11px;
-  line-height: 1.5;
-}
-
 .site-footer nav {
   gap: 20px;
   color: var(--color-muted);

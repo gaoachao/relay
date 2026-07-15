@@ -15,9 +15,10 @@ const pageMetadata: Record<
   }
 > = {
   index: {
-    locale: 'zh-CN',
-    title: 'Relay — 让机器适应你',
-    description: '扫描设备。Relay 通过 Native、Lynx 与 OpenUI 生成任务界面。',
+    locale: 'en',
+    title: 'Relay — Machines, adapted',
+    description:
+      'Scan a device. Relay uses Native, Lynx, and OpenUI to generate the task interface.',
   },
   zh: {
     locale: 'zh-CN',

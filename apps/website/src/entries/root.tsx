@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { App } from '@/App'
 import '@/styles/global.css'
 
-document.documentElement.lang = 'zh-CN'
+document.documentElement.lang = 'en'
 
 const root = document.getElementById('root')
 
@@ -13,6 +13,6 @@ if (!root) {
 
 createRoot(root).render(
   <StrictMode>
-    <App locale="zh" languageHref="./en/" />
+    <App locale="en" languageHref="./zh/" />
   </StrictMode>,
 )

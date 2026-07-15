@@ -9,10 +9,7 @@ export function SiteFooter({ copy, locale }: SiteFooterProps) {
   return (
     <footer className="site-footer">
       <div className="page-shell footer-inner">
-        <div>
-          <strong>{copy.footer.line}</strong>
-          <p>{copy.footer.disclaimer}</p>
-        </div>
+        <strong>{copy.footer.line}</strong>
         <nav aria-label={locale === 'zh' ? '相关文档' : 'Related documentation'}>
           <a href="https://github.com/gaoachao/relay" target="_blank" rel="noreferrer">
             GitHub

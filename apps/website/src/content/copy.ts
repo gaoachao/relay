@@ -45,7 +45,6 @@ export interface SiteCopy {
   }
   footer: {
     line: string
-    disclaimer: string
   }
 }
 
@@ -100,7 +99,6 @@ export const siteCopy = {
     },
     footer: {
       line: 'Relay · Accessible GenUI',
-      disclaimer: '黑客松原型，不用于医疗诊断或无人监督的设备控制。',
     },
   },
   en: {
@@ -154,7 +152,6 @@ export const siteCopy = {
     },
     footer: {
       line: 'Relay · Accessible GenUI',
-      disclaimer: 'Hackathon prototype. Not for medical diagnosis or unsupervised device control.',
     },
   },
 } satisfies Record<Locale, SiteCopy>
