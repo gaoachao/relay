@@ -2,6 +2,9 @@
 
 Three physical controls become one clear action.
 
+The physical panel stays fixed while OpenUI adapts its structure: target focus for low vision,
+a mirrored thumb dock for one-handed use, and visual plus haptic signals when audio is unavailable.
+
 ## Mark
 
 - Source: `relay-app-icon.svg`

@@ -24,15 +24,49 @@ export interface SiteCopy {
     generatedLabel: string
     modesLabel: string
     modes: Record<AccessMode, string>
-    taskLabel: string
-    task: string
-    taskDetail: string
-    stepLabel: string
-    stepTitle: string
-    stepDetail: string
-    action: string
-    completed: string
-    reset: string
+    task: {
+      label: string
+      title: string
+      detail: string
+    }
+    variants: {
+      lowVision: {
+        stepLabel: string
+        targetLabel: string
+        targetNumber: string
+        instruction: string
+        detail: string
+        action: string
+        completed: string
+        reset: string
+      }
+      oneHand: {
+        handLabel: string
+        leftHand: string
+        rightHand: string
+        stepLabel: string
+        instruction: string
+        detail: string
+        action: string
+        completed: string
+        reset: string
+      }
+      quiet: {
+        soundOff: string
+        hapticsOn: string
+        eyebrow: string
+        instruction: string
+        signals: [string, string, string]
+        hapticLabel: string
+        currentLabel: string
+        nextLabel: string
+        doneLabel: string
+        detail: string
+        action: string
+        completed: string
+        reset: string
+      }
+    }
     disclosure: string
   }
   technology: {
@@ -73,18 +107,52 @@ export const siteCopy = {
       modesLabel: '选择辅助模式',
       modes: {
         lowVision: '低视力',
-        oneHand: '单手',
-        quiet: '静音',
+        oneHand: '单手操作',
+        quiet: '无声引导',
       },
-      taskLabel: '任务',
-      task: '快速洗',
-      taskDetail: '23 分钟 · 冷水',
-      stepLabel: '第 1 步，共 3 步',
-      stepTitle: '按下右侧高亮按钮',
-      stepDetail: '触觉指引位置，相机确认结果。',
-      action: '开始引导',
-      completed: '这一步已确认',
-      reset: '重新演示',
+      task: {
+        label: '任务',
+        title: '快速洗',
+        detail: '23 分钟 · 冷水',
+      },
+      variants: {
+        lowVision: {
+          stepLabel: '第 1 / 3 步 · 23 分钟',
+          targetLabel: '按键',
+          targetNumber: '8',
+          instruction: '按一下',
+          detail: '跟随高亮光环；对准后振动两次。',
+          action: '开始视觉引导',
+          completed: '已确认 8 号按键',
+          reset: '重新视觉引导',
+        },
+        oneHand: {
+          handLabel: '选择操作手',
+          leftHand: '左手',
+          rightHand: '右手',
+          stepLabel: '第 1 / 3 步',
+          instruction: '将相机对准面板',
+          detail: '操作始终位于拇指可及区域。',
+          action: '定位 8 号按键',
+          completed: '已找到 8 号按键',
+          reset: '再次定位',
+        },
+        quiet: {
+          soundOff: '声音关闭',
+          hapticsOn: '振动开启',
+          eyebrow: '视觉指引',
+          instruction: '跟随视觉信号',
+          signals: ['找到 8 号按键', '按一下', '相机确认'],
+          hapticLabel: '振动节奏',
+          currentLabel: '当前',
+          nextLabel: '下一步',
+          doneLabel: '完成',
+          detail: '光环常亮表示已对准；双振表示已确认。',
+          action: '开始无声引导',
+          completed: '已通过画面与振动确认',
+          reset: '重新无声引导',
+        },
+      },
       disclosure: '原型 · 操作前确认设备状态',
     },
     technology: {
@@ -127,17 +195,51 @@ export const siteCopy = {
       modes: {
         lowVision: 'Low vision',
         oneHand: 'One hand',
-        quiet: 'Quiet',
+        quiet: 'No audio',
       },
-      taskLabel: 'Task',
-      task: 'Quick wash',
-      taskDetail: '23 minutes · Cold water',
-      stepLabel: 'Step 1 of 3',
-      stepTitle: 'Press the highlighted button on the right',
-      stepDetail: 'Haptics guide your hand. The camera confirms the result.',
-      action: 'Start guidance',
-      completed: 'Step confirmed',
-      reset: 'Replay demo',
+      task: {
+        label: 'Task',
+        title: 'Quick wash',
+        detail: '23 minutes · Cold water',
+      },
+      variants: {
+        lowVision: {
+          stepLabel: 'STEP 1 / 3 · 23 MIN',
+          targetLabel: 'BUTTON',
+          targetNumber: '8',
+          instruction: 'Press once',
+          detail: 'Follow the bright ring. Two pulses when aligned.',
+          action: 'Start visual guide',
+          completed: 'Button 8 confirmed',
+          reset: 'Replay visual guide',
+        },
+        oneHand: {
+          handLabel: 'Choose operating hand',
+          leftHand: 'Left',
+          rightHand: 'Right',
+          stepLabel: 'STEP 1 / 3',
+          instruction: 'Point at the panel',
+          detail: 'Controls stay within thumb reach.',
+          action: 'Locate button 8',
+          completed: 'Button 8 found',
+          reset: 'Locate again',
+        },
+        quiet: {
+          soundOff: 'Sound off',
+          hapticsOn: 'Haptics on',
+          eyebrow: 'Visual guide',
+          instruction: 'Follow the signal',
+          signals: ['Find button 8', 'Press once', 'Camera confirms'],
+          hapticLabel: 'Haptic pattern',
+          currentLabel: 'NOW',
+          nextLabel: 'NEXT',
+          doneLabel: 'DONE',
+          detail: 'Solid ring = aligned. Double pulse = confirmed.',
+          action: 'Start no-audio guide',
+          completed: 'Confirmed on screen and by haptic',
+          reset: 'Replay no-audio guide',
+        },
+      },
       disclosure: 'Prototype · Confirm the device state before acting',
     },
     technology: {

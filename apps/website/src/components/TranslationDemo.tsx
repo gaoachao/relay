@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { GeneratedGuides } from '@/components/demo/GeneratedGuides'
 import type { AccessMode, SiteCopy } from '@/content/copy'
 
 interface TranslationDemoProps {
@@ -72,25 +73,13 @@ export function TranslationDemo({ copy }: TranslationDemoProps) {
           <div className="stage-label" id="generated-title">
             {copy.demo.generatedLabel}
           </div>
-          <div className="generated-screen">
-            <div className="generated-task">
-              <p>{copy.demo.taskLabel}</p>
-              <strong>{copy.demo.task}</strong>
-              <span className="generated-task-detail">{copy.demo.taskDetail}</span>
-            </div>
-            <div className="generated-step" aria-live="polite">
-              <p>{copy.demo.stepLabel}</p>
-              <h3>{isComplete ? copy.demo.completed : copy.demo.stepTitle}</h3>
-              <span className="generated-step-detail">{copy.demo.stepDetail}</span>
-            </div>
-            <button
-              className={isComplete ? 'demo-action is-complete' : 'demo-action'}
-              type="button"
-              onClick={() => setIsComplete((complete) => !complete)}
-            >
-              {isComplete ? copy.demo.reset : copy.demo.action}
-            </button>
-          </div>
+          <GeneratedGuides
+            copy={copy.demo}
+            isComplete={isComplete}
+            key={mode}
+            mode={mode}
+            onToggleComplete={() => setIsComplete((complete) => !complete)}
+          />
         </article>
 
         <div className="relay-gate" aria-hidden="true">
