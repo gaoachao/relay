@@ -11,20 +11,18 @@ describe('Relay website', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: /A better interface for what’s in front of you/i,
+        name: 'Machines, adapted.',
       }),
     ).toBeInTheDocument()
 
     const languageLink = screen.getByRole('link', { name: 'Switch language' })
     expect(languageLink).toHaveAttribute('href', '../zh/')
 
-    expect(
-      screen.getByText('Scan a panel. Relay generates an interface for you and the task at hand.'),
-    ).toBeInTheDocument()
+    expect(screen.getByText('Scan a device. Get the interface.')).toBeInTheDocument()
     expect(document.getElementById('top')).toBeInTheDocument()
     expect(document.getElementById('main-content')).toBeInTheDocument()
     expect(document.getElementById('experience')).toBeInTheDocument()
-    expect(document.getElementById('approach')).toHaveTextContent('Scan · Confirm · Generate')
+    expect(document.getElementById('approach')).toHaveTextContent('Vision → OpenUI → Native')
     expect(document.getElementById('technology')).toBeInTheDocument()
 
     const navigation = screen.getByRole('navigation', { name: 'Primary navigation' })
@@ -55,9 +53,7 @@ describe('Relay website', () => {
     await user.click(screen.getByRole('button', { name: 'Quiet' }))
     expect(screen.getByRole('button', { name: 'Start guidance' })).toBeInTheDocument()
 
-    expect(
-      screen.getByText('Permissions, confirmations, and critical actions always run in Native.'),
-    ).toBeInTheDocument()
+    expect(screen.getByText('Critical actions always return to Native.')).toBeInTheDocument()
   })
 
   it('renders the Chinese page with a direct English language route', () => {
@@ -66,12 +62,12 @@ describe('Relay website', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: /为眼前的设备，生成更好用的界面。/,
+        name: '机器，适应你。',
       }),
     ).toBeInTheDocument()
     expect(screen.getByRole('link', { name: '切换语言' })).toHaveAttribute('href', '../en/')
-    expect(screen.getByText('扫描面板。Relay 生成适合你和当前任务的界面。')).toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: '同一台机器，为你改变。' })).toBeInTheDocument()
-    expect(screen.getByText('Native 保持可信，GenUI 负责变化。')).toBeInTheDocument()
+    expect(screen.getByText('扫描设备，生成界面。')).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: '实时生成' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: '生成有边界。' })).toBeInTheDocument()
   })
 })

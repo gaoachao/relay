@@ -16,20 +16,19 @@ const pageMetadata: Record<
 > = {
   index: {
     locale: 'zh-CN',
-    title: 'Relay — A better interface for what’s in front of you',
-    description: 'Relay 把复杂的实体设备面板翻译成适合当前用户与任务的操作界面。',
+    title: 'Relay — 机器，适应你',
+    description: '扫描设备。Relay 通过 Native、Lynx 与 OpenUI 生成任务界面。',
   },
   zh: {
     locale: 'zh-CN',
-    title: 'Relay — 为眼前的设备，生成更好用的界面',
-    description:
-      '扫描眼前的设备面板。Relay 通过 Native、Lynx 与 OpenUI，生成更容易看、听、触摸和完成的操作界面。',
+    title: 'Relay — 机器，适应你',
+    description: '扫描设备。Relay 通过 Native、Lynx 与 OpenUI 生成任务界面。',
   },
   en: {
     locale: 'en',
-    title: 'Relay — A better interface for what’s in front of you',
+    title: 'Relay — Machines, adapted',
     description:
-      'Scan a physical control panel. Relay uses Native, Lynx, and OpenUI to generate an interface that is easier to see, hear, touch, and complete.',
+      'Scan a device. Relay uses Native, Lynx, and OpenUI to generate the task interface.',
   },
 }
 
@@ -37,7 +36,7 @@ export default defineConfig({
   plugins: [pluginReact(), pluginTypeCheck()],
   source: {
     entry: {
-      index: './src/entries/root.ts',
+      index: './src/entries/root.tsx',
       zh: './src/entries/zh.tsx',
       en: './src/entries/en.tsx',
     },

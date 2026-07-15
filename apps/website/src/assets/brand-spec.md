@@ -10,7 +10,9 @@ Three physical controls become one clear action.
 
 ## Color
 
-- Light: ground `#FFFFFF`, surface `#F5F2F4`, ink `#191719`, accent `#68405F`, on-accent `#FFFFFF`
-- Dark: ground `#111011`, surface `#1B181A`, ink `#F7F4F5`, accent `#D6A7C4`, on-accent `#111111`
+- Porcelain `#F1F0EC`
+- Carbon `#101214`, raised carbon `#1A1D1F`
+- Alloy `#CACBC6`
+- Relay plum `#68405F` / dark accent `#D6A7C4`
 
 No gradients, glows, extra accents, shadows, distortion, path recoloring, or text inside the icon. Pair the mark with a live-text `Relay` wordmark.

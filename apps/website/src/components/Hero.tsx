@@ -1,3 +1,4 @@
+import { TranslationDemo } from '@/components/TranslationDemo'
 import type { SiteCopy } from '@/content/copy'
 
 interface HeroProps {
@@ -7,26 +8,18 @@ interface HeroProps {
 export function Hero({ copy }: HeroProps) {
   return (
     <section className="hero-section" id="top" aria-labelledby="hero-title">
-      <div className="page-shell hero-inner">
-        <h1 id="hero-title" aria-label={copy.hero.titleLabel}>
-          {copy.hero.title.split('\n').map((line) => (
-            <span className="hero-title-line" key={line}>
-              {line}{' '}
-            </span>
-          ))}
-        </h1>
-        <p className="hero-lead">{copy.hero.lead}</p>
-        <div className="hero-actions">
-          <a className="primary-link" href="#experience">
-            {copy.hero.primaryAction}
-            <span className="link-arrow" aria-hidden="true">
-              ↓
-            </span>
-          </a>
+      <div className="page-shell hero-layout">
+        <div className="hero-copy">
+          <h1 id="hero-title" aria-label={copy.hero.titleLabel}>
+            {copy.hero.title}
+          </h1>
+          <p className="hero-lead">{copy.hero.lead}</p>
+          <p className="hero-flow" id="approach">
+            {copy.hero.flow}
+          </p>
         </div>
-        <p className="hero-flow" id="approach">
-          {copy.hero.flow}
-        </p>
+
+        <TranslationDemo copy={copy} />
       </div>
     </section>
   )

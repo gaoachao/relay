@@ -12,5 +12,5 @@ pnpm --filter @relay/website build
 
 ## Notes
 
-- `/` selects a locale; `/zh/` and `/en/` are real generated HTML entries.
+- `/` renders Chinese directly; `/zh/` and `/en/` remain standalone entries.
 - GitHub Pages sets `RELAY_BASE_PATH=/relay/`; local development uses `/`.

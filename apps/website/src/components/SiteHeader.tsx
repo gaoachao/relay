@@ -3,12 +3,11 @@ import type { Locale, SiteCopy } from '@/content/copy'
 
 interface SiteHeaderProps {
   copy: SiteCopy
+  languageHref: string
   locale: Locale
 }
 
-export function SiteHeader({ copy, locale }: SiteHeaderProps) {
-  const languageHref = locale === 'zh' ? '../en/' : '../zh/'
-
+export function SiteHeader({ copy, languageHref, locale }: SiteHeaderProps) {
   return (
     <header className="site-header">
       <div className="page-shell header-inner">

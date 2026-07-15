@@ -8,7 +8,10 @@ export function StackSection({ copy }: StackSectionProps) {
   return (
     <section className="stack-section" id="technology" aria-labelledby="technology-title">
       <div className="page-shell stack-inner">
-        <h2 id="technology-title">{copy.technology.title}</h2>
+        <div className="stack-heading">
+          <h2 id="technology-title">{copy.technology.title}</h2>
+          <p className="native-boundary">{copy.technology.safety}</p>
+        </div>
 
         <ul className="compact-stack">
           {copy.technology.layers.map((layer) => (
@@ -18,8 +21,6 @@ export function StackSection({ copy }: StackSectionProps) {
             </li>
           ))}
         </ul>
-
-        <p className="native-boundary">{copy.technology.safety}</p>
       </div>
     </section>
   )

@@ -13,6 +13,6 @@ if (!root) {
 
 createRoot(root).render(
   <StrictMode>
-    <App locale="zh" />
+    <App locale="zh" languageHref="../en/" />
   </StrictMode>,
 )
