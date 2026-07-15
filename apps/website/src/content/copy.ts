@@ -61,8 +61,8 @@ export const siteCopy = {
       languageName: 'EN',
     },
     hero: {
-      title: '机器，\n适应你。',
-      titleLabel: '机器，适应你。',
+      title: '让机器\n适应你。',
+      titleLabel: '让机器适应你。',
       lead: '扫描设备，生成界面。',
       flow: 'Vision → OpenUI → Native',
     },

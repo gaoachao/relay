@@ -9,7 +9,7 @@ describe('Relay website root route', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: '机器，适应你。',
+        name: '让机器适应你。',
       }),
     ).toBeInTheDocument()
     expect(screen.getByRole('link', { name: '切换语言' })).toHaveAttribute('href', './en/')

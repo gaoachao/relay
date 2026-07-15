@@ -16,12 +16,12 @@ const pageMetadata: Record<
 > = {
   index: {
     locale: 'zh-CN',
-    title: 'Relay — 机器，适应你',
+    title: 'Relay — 让机器适应你',
     description: '扫描设备。Relay 通过 Native、Lynx 与 OpenUI 生成任务界面。',
   },
   zh: {
     locale: 'zh-CN',
-    title: 'Relay — 机器，适应你',
+    title: 'Relay — 让机器适应你',
     description: '扫描设备。Relay 通过 Native、Lynx 与 OpenUI 生成任务界面。',
   },
   en: {
