@@ -79,6 +79,10 @@ describe('Relay website', () => {
         name: 'Confirmed on screen and by haptic',
       }),
     ).toBeVisible()
+    const replayNoAudioGuide = within(generatedInterface).getByRole('button', {
+      name: 'Replay no-audio guide',
+    })
+    expect(replayNoAudioGuide.closest('.no-audio-footer')).not.toBeNull()
 
     expect(screen.getByText('Critical actions always return to Native.')).toBeInTheDocument()
   })

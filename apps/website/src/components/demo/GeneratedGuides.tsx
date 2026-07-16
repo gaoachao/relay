@@ -137,20 +137,22 @@ function NoAudioGuide({ copy, isComplete, onToggleComplete }: GuideProps) {
         ))}
       </ol>
 
-      <div className="haptic-pattern">
-        <span>{variant.hapticLabel}</span>
-        <i aria-hidden="true" />
-        <i aria-hidden="true" />
-        <i aria-hidden="true" className="is-long" />
-      </div>
+      <div className="no-audio-footer">
+        <div className="haptic-pattern">
+          <span>{variant.hapticLabel}</span>
+          <i aria-hidden="true" />
+          <i aria-hidden="true" />
+          <i aria-hidden="true" className="is-long" />
+        </div>
 
-      <p className="no-audio-detail">{variant.detail}</p>
-      <GuideAction
-        action={variant.action}
-        isComplete={isComplete}
-        onToggleComplete={onToggleComplete}
-        reset={variant.reset}
-      />
+        <p className="no-audio-detail">{variant.detail}</p>
+        <GuideAction
+          action={variant.action}
+          isComplete={isComplete}
+          onToggleComplete={onToggleComplete}
+          reset={variant.reset}
+        />
+      </div>
     </div>
   )
 }
