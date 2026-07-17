@@ -4,6 +4,14 @@ import UIKit
 public final class RelayBridge: NSObject, LynxModule {
     public static var name: String { "RelayBridge" }
 
+    public override init() {
+        super.init()
+    }
+
+    public init(param: Any) {
+        super.init()
+    }
+
     public static var methodLookup: [String: String] {
         [
             "announce": NSStringFromSelector(#selector(announce(_:))),
