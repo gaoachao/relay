@@ -22,10 +22,10 @@ targets:
       - path: Relay
         excludes:
           - Resources
-    resources:
       - path: Relay/Resources
         excludes:
           - Info.plist
+        buildPhase: resources
     info:
       path: Relay/Resources/Info.plist
       properties:
@@ -34,6 +34,9 @@ targets:
         CFBundleLocalizations:
           - en
           - zh-Hans
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSRequiresIPhoneOS: true
         NSCameraUsageDescription: Relay uses the camera to read labels on a control panel.
         UILaunchScreen: {}
         UISupportedInterfaceOrientations:

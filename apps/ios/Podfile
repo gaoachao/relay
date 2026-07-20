@@ -17,5 +17,19 @@ post_install do |installer|
       config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '17.0'
       config.build_settings['ENABLE_USER_SCRIPT_SANDBOXING'] = 'NO'
     end
+
+    # Lynx 3.8 adds -Werror per source file. Xcode 26 reports deprecated UIKit
+    # APIs in that third-party code, which should remain warnings for the host.
+    next unless target.name == 'Lynx'
+
+    target.source_build_phase.files.each do |build_file|
+      flags = build_file.settings&.fetch('COMPILER_FLAGS', nil)
+      next unless flags
+
+      build_file.settings['COMPILER_FLAGS'] = flags
+        .split
+        .reject { |flag| flag == '-Werror' }
+        .join(' ')
+    end
   end
 end

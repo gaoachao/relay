@@ -9,7 +9,7 @@ struct RelayLynxView: UIViewRepresentable {
 
         let size = UIScreen.main.bounds.size
         let config = LynxConfig(provider: BundleTemplateProvider())
-        config.registerModule(RelayBridge.self)
+        config.register(RelayBridge.self)
 
         let lynxView = LynxView { builder in
             builder.config = config
