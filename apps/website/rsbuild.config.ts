@@ -16,20 +16,20 @@ const pageMetadata: Record<
 > = {
   index: {
     locale: 'en',
-    title: 'Relay — Machines, adapted',
+    title: 'Relay — Every machine, made for you',
     description:
-      'Scan a device. Relay uses Native, Lynx, and OpenUI to generate the task interface.',
+      'Point the camera and say what you need. Relay turns unfamiliar controls into a clear, accessible interface.',
   },
   zh: {
     locale: 'zh-CN',
-    title: 'Relay — 让机器适应你',
-    description: '扫描设备。Relay 通过 Native、Lynx 与 OpenUI 生成任务界面。',
+    title: 'Relay — 设备再陌生，也能轻松上手',
+    description: '对准设备，说出要做什么。Relay 会把陌生面板变成清楚、顺手的操作界面。',
   },
   en: {
     locale: 'en',
-    title: 'Relay — Machines, adapted',
+    title: 'Relay — Every machine, made for you',
     description:
-      'Scan a device. Relay uses Native, Lynx, and OpenUI to generate the task interface.',
+      'Point the camera and say what you need. Relay turns unfamiliar controls into a clear, accessible interface.',
   },
 }
 

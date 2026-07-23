@@ -11,26 +11,33 @@ describe('Relay website', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: 'Machines, adapted.',
+        name: 'Every machine, made for you.',
       }),
     ).toBeInTheDocument()
 
     const languageLink = screen.getByRole('link', { name: 'Switch language' })
     expect(languageLink).toHaveAttribute('href', '../zh/')
 
-    expect(screen.getByText('Scan a device. Get the interface.')).toBeInTheDocument()
+    expect(
+      screen.getByText(
+        'Point the camera. Say what you need. Relay turns an unfamiliar control panel into a clear, accessible interface.',
+      ),
+    ).toBeInTheDocument()
+    expect(screen.getAllByRole('link', { name: 'See it adapt' })).toHaveLength(2)
     expect(document.getElementById('top')).toBeInTheDocument()
     expect(document.getElementById('main-content')).toBeInTheDocument()
     expect(document.getElementById('experience')).toBeInTheDocument()
-    expect(document.getElementById('approach')).toHaveTextContent('Vision → OpenUI → Native')
+    expect(document.getElementById('approach')).toHaveTextContent(
+      'Camera → intent → one clear action',
+    )
     expect(document.getElementById('technology')).toBeInTheDocument()
 
     const navigation = screen.getByRole('navigation', { name: 'Primary navigation' })
-    expect(within(navigation).getByRole('link', { name: 'Demo' })).toHaveAttribute(
+    expect(within(navigation).getByRole('link', { name: 'Live demo' })).toHaveAttribute(
       'href',
       '#experience',
     )
-    expect(within(navigation).getByRole('link', { name: 'Stack' })).toHaveAttribute(
+    expect(within(navigation).getByRole('link', { name: 'How it works' })).toHaveAttribute(
       'href',
       '#technology',
     )
@@ -39,7 +46,7 @@ describe('Relay website', () => {
       'https://github.com/gaoachao/relay',
     )
 
-    const generatedInterface = screen.getByRole('article', { name: 'OpenUI' })
+    const generatedInterface = screen.getByRole('article', { name: 'What you get' })
     expect(within(generatedInterface).getByRole('heading', { name: 'Press once' })).toBeVisible()
     expect(
       within(generatedInterface).getByRole('button', { name: 'Start visual guide' }),
@@ -84,7 +91,9 @@ describe('Relay website', () => {
     })
     expect(replayNoAudioGuide.closest('.no-audio-footer')).not.toBeNull()
 
-    expect(screen.getByText('Critical actions always return to Native.')).toBeInTheDocument()
+    expect(
+      screen.getByText('Relay changes how you operate a device, never its safety boundary.'),
+    ).toBeInTheDocument()
   })
 
   it('renders the Chinese page with a direct English language route', () => {
@@ -93,13 +102,15 @@ describe('Relay website', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: '让机器适应你。',
+        name: '设备再陌生，也能轻松上手。',
       }),
     ).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: '切换语言' })).toHaveAttribute('href', '../en/')
-    expect(screen.getByText('扫描设备，生成界面。')).toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: '实时生成' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: '切换到英文' })).toHaveAttribute('href', '../en/')
+    expect(
+      screen.getByText('对准设备，说出要做什么。Relay 会把陌生面板变成清楚、顺手的操作界面。'),
+    ).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: '同一台设备，换种方式操作' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: '无声引导' })).toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: '生成有边界。' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: '生成，但不越界。' })).toBeInTheDocument()
   })
 })

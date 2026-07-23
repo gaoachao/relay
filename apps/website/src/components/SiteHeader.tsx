@@ -27,14 +27,19 @@ export function SiteHeader({ copy, languageHref, locale }: SiteHeaderProps) {
           </a>
         </nav>
 
-        <a
-          className="language-link"
-          href={languageHref}
-          hrefLang={locale === 'zh' ? 'en' : 'zh-CN'}
-          aria-label={copy.navigation.languageLabel}
-        >
-          {copy.navigation.languageName}
-        </a>
+        <div className="header-actions">
+          <a
+            className="language-link"
+            href={languageHref}
+            hrefLang={locale === 'zh' ? 'en' : 'zh-CN'}
+            aria-label={copy.navigation.languageLabel}
+          >
+            {copy.navigation.languageName}
+          </a>
+          <a className="header-cta" href="#experience">
+            {copy.hero.action}
+          </a>
+        </div>
       </div>
     </header>
   )
