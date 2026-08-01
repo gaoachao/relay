@@ -10,18 +10,18 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@lynx-js/genui": "0.0.6",
-    "@lynx-js/lynx-ui": "3.135.0",
-    "@lynx-js/react": "0.122.1",
-    "zod": "3.25.76"
+    "@lynx-js/genui": "0.1.0",
+    "@lynx-js/lynx-ui": "3.135.2",
+    "@lynx-js/react": "0.123.0",
+    "zod": "4.4.3"
   },
   "devDependencies": {
-    "@lynx-js/react-rsbuild-plugin": "0.17.2",
-    "@lynx-js/rspeedy": "0.15.2",
-    "@lynx-js/types": "3.9.0",
+    "@lynx-js/react-rsbuild-plugin": "0.18.0",
+    "@lynx-js/rspeedy": "0.16.0",
+    "@lynx-js/types": "4.0.0",
     "@relay/openui-catalog": "workspace:*",
-    "@types/react": "18.3.28",
-    "typescript": "5.9.3",
+    "@types/react": "18.3.31",
+    "typescript": "6.0.3",
     "vitest": "4.1.10"
   }
 }
