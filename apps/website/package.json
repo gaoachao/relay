@@ -16,21 +16,21 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "react": "19.2.7",
-    "react-dom": "19.2.7"
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
   },
   "devDependencies": {
-    "@rsbuild/core": "2.1.5",
+    "@rsbuild/core": "2.1.13",
     "@rsbuild/plugin-react": "2.1.0",
-    "@rsbuild/plugin-type-check": "1.5.0",
-    "@testing-library/jest-dom": "6.9.1",
+    "@rsbuild/plugin-type-check": "1.6.0",
+    "@testing-library/jest-dom": "7.0.0",
     "@testing-library/react": "16.3.2",
-    "@testing-library/user-event": "14.6.1",
+    "@testing-library/user-event": "14.6.5",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
-    "jsdom": "29.1.1",
+    "jsdom": "30.0.1",
     "typescript": "catalog:",
-    "vitest": "4.1.10"
+    "vitest": "4.1.11"
   }
 }
